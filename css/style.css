@@ -1,0 +1,74 @@
+body{
+   background: linear-gradient(135deg, #120014, #2a0033);
+}
+
+
+h1{
+    font-size: 50px;
+    background-color:#01fefe ;
+    border-color:#005858 ;
+    padding: 2px 5px;
+    border-radius: 20px;
+}
+h2{
+    font-size: 25px;
+    background-color:#01fefe ;
+    border-color:#005858 ;
+    padding: 2px 5px;
+    border-radius: 12px;
+}
+
+p{
+    font-size: 15px;
+    background-color:#01fefe ;
+    border-color:#005858 ;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+img{
+    size: 50px;
+    border-radius:20px;
+    border-color:#01fefe;
+}
+
+a {
+    font-size: 30px;
+    color: aliceblue;
+  text-decoration: none;
+  position:relative;
+  transition: all 0.5s ease;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #01fefe;
+  visibility: hidden;
+  clip: rect(0, 0, 0, 0);
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: #01fefe;
+  animation: neonFlicker 1.5s infinite alternate;
+}
+
+a:hover::before {
+  visibility: visible;
+  clip: rect(0, 900px, 0, 0);
+  animation: neonFlicker 1.5s infinite alternate;
+}
+
+@keyframes neonFlicker {
+  0%, 100% {
+    text-shadow: 0 0 5px #01fefe, 0 0 10px #01fefe, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 5px #01fefe, 0 0 10px #01fefe, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 75px #ff00ff;
+  }
+}
